@@ -1,0 +1,22 @@
+#include<Servo.h>
+int irpin = 7;
+int servopin = 11;
+Servo pwm;
+
+void setup() {
+pwm.attach(servopin);
+pinMode(irpin, INPUT);
+}
+
+void loop() {
+digitalRead(irpin);
+if (irpin, LOW)
+{
+  pwm.write(90);
+}
+else 
+{
+  pwm.write(0);
+}
+delay(100);
+}
